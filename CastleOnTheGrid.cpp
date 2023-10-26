@@ -21,15 +21,6 @@ void move(vector<string> grid, int startX, int startY, int goalX, int goalY, int
  *  4. INTEGER goalX
  *  5. INTEGER goalY
  */
-
-void printGrid(vector<string> grid)
-{
-    for (string s : grid)
-    {
-        cout << s << endl;
-    }
-}
-
 int minimumMoves(vector<string> grid, int startX, int startY, int goalX, int goalY)
 {
     int minSteps = INT_MAX;
@@ -76,15 +67,6 @@ void move(vector<string> grid, int startX, int startY, int goalX, int goalY, int
     {
         move(grid, startX + 1, startY, goalX, goalY, lastMove != 'D' ? steps + 1 : steps, 'D', minSteps);
     }
-
-    /*
-    cout << "CURRENT STATUS [" << stepsLeft << ", " << stepsRight << ", " << stepsUp << ", " << stepsDown << "]" << endl;
-    printGrid(grid);
-    cout << endl;
-
-    int best = min({stepsLeft, stepsRight, stepsUp, stepsDown});
-    return best;
-    */
 }
 
 int main()
